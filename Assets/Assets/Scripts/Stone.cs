@@ -55,7 +55,7 @@ public class Stone : MonoBehaviour
         //y *= 1.25f;
 
         x += 0.5f;
-        y += -0.5f;
+        y -= 0.5f;
 
         this.transform.position = new Vector3(x,y,-1.0f); // set z = -1 so in front of board
     }
@@ -67,17 +67,14 @@ public class Stone : MonoBehaviour
     }   
 
     // When you click on a stone
-    public void OnMouseUp()
+    /*public void OnMouseUp()
     {   
         if (!getStoneDeployment())
         {
             // Turn on MovePlates
-            SpawnMovePlate(0,0);
+            SpawnMovePlate(0, 0);
         }
-
-        // Once deployed, cannot be moved again
-        setStoneDeployment(true);
-    }
+    }*/
 
     public void SpawnMovePlate(int matrixX, int matrixY)
     {
@@ -88,13 +85,12 @@ public class Stone : MonoBehaviour
         //x *= 1.25f;
         //y *= 1.25f;
 
-        //x += -4.4f;
-        //y += -4.4f;
+        x += 0.5f;
+        y -= 0.5f;
 
         GameObject mp = Instantiate(movePlate, new Vector3(x,y,-3.0f), Quaternion.identity); // for displaying on screen in unity
         MovePlate mpScript = mp.GetComponent<MovePlate>();
         mpScript.SetReference(gameObject);
-        mpScript.plateX = matrixX;
-        mpScript.plateY = matrixY; // for us to keep track
+        mpScript.SetCoords(matrixX, matrixY);  // for us to keep track
     }
 }

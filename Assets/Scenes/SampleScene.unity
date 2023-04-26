@@ -167,12 +167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392ec1989735547bc834010547c7175a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wStone: {fileID: 7561079511283326270, guid: 9b042fe75e73c4adb8081868a07ac17f, type: 3}
-  bStone: {fileID: 8932299769793028002, guid: b86ab3a45ed8b441fbd06bdd74f36a42, type: 3}
+  stone_obj: {fileID: 7561079511283326270, guid: 9b042fe75e73c4adb8081868a07ac17f, type: 3}
   controller: {fileID: 0}
   boardSize: 9
-  gameBoard: {fileID: 0}
-  tileMap: {fileID: 1194194178}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,6 +181,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -257,6 +255,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56666c5a40171f54783dd416a44f42bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_MaxRayIntersections: 0
 --- !u!1001 &645522913
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -322,11 +336,6 @@ Transform:
 --- !u!4 &1194194176 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8005826277766711354, guid: d2571a755ee6a4a5b958e353fe4036fb, type: 3}
-  m_PrefabInstance: {fileID: 8005826278859488570}
-  m_PrefabAsset: {fileID: 0}
---- !u!1839735485 &1194194178 stripped
-Tilemap:
-  m_CorrespondingSourceObject: {fileID: 8005826277766711352, guid: d2571a755ee6a4a5b958e353fe4036fb, type: 3}
   m_PrefabInstance: {fileID: 8005826278859488570}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1582404378

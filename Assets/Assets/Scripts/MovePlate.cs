@@ -29,11 +29,20 @@ public class MovePlate : MonoBehaviour
 
     public void SetReference(GameObject obj) { reference = obj; }
 
+    public void SetCoords(int x, int y)
+    {
+        plateX = x;
+        plateY = y;
+    }
+
     // activates when you click on the MovePlate
     public void OnMouseUp()
     {
         // Move Piece to MovePlate location
         // Get Controller 
         controller = GameObject.FindGameObjectWithTag("GameController");
+
+        // Once deployed, cannot be moved again
+        reference.GetComponent<Stone>().setStoneDeployment(true);
     }
 }

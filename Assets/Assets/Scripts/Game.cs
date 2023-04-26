@@ -35,7 +35,7 @@ public class Game : MonoBehaviour
 
 
         blackStones = new GameObject[] {
-            Create(1,0,0)
+            Create(1,2,2)
         };
         /*
         // Create all black and white stones and put them on the side of the board 
